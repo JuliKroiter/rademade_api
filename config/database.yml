@@ -1,0 +1,22 @@
+default: &default
+ adapter: postgresql
+ encoding: unicode
+ pool: 5
+
+development:
+ <<: *default
+ database: rademade_api_development
+ username: postgres
+ password: postgres
+
+test:
+ <<: *default
+ database: rademade_api_test
+ username: postgres
+ password: postgres
+
+production:
+  <<: *default
+  database: rademade_api_production
+  username: postgres
+  password: postgres
