@@ -1,6 +1,6 @@
 class V1::ItemsController < ApplicationController
   def index
-    @items = Item.all
+    @items = paginate Item.all, per_page: 10
 
     json_response @items
   end
@@ -12,8 +12,8 @@ class V1::ItemsController < ApplicationController
   end
 
   def by_category
-    @items = Item.by_categories(params[:category_ids])
+    @items = paginate Item.by_categories(params[:category_ids]), per_page: 10
 
-    json_response @items
+    json_response  @items
   end
 end

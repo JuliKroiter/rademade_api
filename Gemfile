@@ -27,6 +27,9 @@ gem 'puma', '~> 3.7'
 
 # Api
 gem 'active_model_serializers'
+gem 'will_paginate'
+gem 'api-pagination'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
